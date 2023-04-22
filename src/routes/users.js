@@ -10,7 +10,7 @@ router.get('/usersStyled', async (req, res) => { //ruta con tabla estilizada
 
 router.get('/users', async (req, res) => { //ruta con datos en crudo
   const Users = await User.find({});
-  res.send({Users});
+  res.json({Users});
 });
 
 module.exports = router; // exportamos el router de users
